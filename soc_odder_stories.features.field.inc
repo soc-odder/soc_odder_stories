@@ -93,7 +93,7 @@ function soc_odder_stories_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
-        'weight' => '5',
+        'weight' => '4',
       ),
     ),
   );
@@ -432,7 +432,7 @@ function soc_odder_stories_field_default_fields() {
         'module' => 'vud_field',
         'settings' => array(),
         'type' => 'vud_field_default_widget',
-        'weight' => '6',
+        'weight' => '5',
       ),
     ),
   );
