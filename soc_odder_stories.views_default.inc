@@ -92,23 +92,6 @@ function soc_odder_stories_views_default_views() {
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
   $handler->display->display_options['filters']['promote']['value'] = '1';
 
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Indlæg, nyheder og kommentarer';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['use_more'] = FALSE;
-  $handler->display->display_options['use_more'] = TRUE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Flere indlæg';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-
   /* Display: Side */
   $handler = $view->new_display('page', 'Side', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
@@ -137,6 +120,12 @@ function soc_odder_stories_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Blok */
+  $handler = $view->new_display('block', 'Blok', 'block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Indlæg, kommentarer og nyheder';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['soc_odder_stories'] = array(
     t('Master'),
     t('mere'),
@@ -152,11 +141,10 @@ function soc_odder_stories_views_default_views() {
     t('‹ forrige'),
     t('næste ›'),
     t('sidste »'),
-    t('Content pane'),
-    t('Indlæg, nyheder og kommentarer'),
-    t('Flere indlæg'),
-    t('View panes'),
     t('Side'),
+    t('Indlæg, nyheder og kommentarer'),
+    t('Blok'),
+    t('Indlæg, kommentarer og nyheder'),
   );
   $export['soc_odder_stories'] = $view;
 
