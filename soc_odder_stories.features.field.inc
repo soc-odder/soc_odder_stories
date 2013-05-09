@@ -61,12 +61,8 @@ function soc_odder_stories_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'entityreference',
-          'settings' => array(
-            'links' => 0,
-            'view_mode' => 'teaser',
-          ),
-          'type' => 'entityreference_entity_view',
+          'settings' => array(),
+          'type' => 'hidden',
           'weight' => '4',
         ),
         'teaser' => array(
@@ -135,13 +131,9 @@ function soc_odder_stories_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => 'large',
-          ),
-          'type' => 'image',
-          'weight' => '1',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -228,10 +220,9 @@ function soc_odder_stories_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '0',
+          'type' => 'hidden',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -321,7 +312,7 @@ function soc_odder_stories_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '2',
+          'weight' => '0',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -338,8 +329,9 @@ function soc_odder_stories_field_default_fields() {
       'settings' => array(
         'better_formats' => array(
           'allowed_formats' => array(
-            'filtered_html' => 'filtered_html',
+            'filtered_html' => 0,
             'plain_text' => 0,
+            'wysiwyg' => 'wysiwyg',
           ),
           'allowed_formats_toggle' => 1,
           'default_order_toggle' => 0,
@@ -350,6 +342,9 @@ function soc_odder_stories_field_default_fields() {
               ),
               'plain_text' => array(
                 'weight' => '10',
+              ),
+              'wysiwyg' => array(
+                'weight' => '0',
               ),
             ),
           ),
@@ -408,7 +403,7 @@ function soc_odder_stories_field_default_fields() {
           'module' => 'vud_field',
           'settings' => array(),
           'type' => 'default',
-          'weight' => '5',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -476,7 +471,7 @@ function soc_odder_stories_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '6',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
