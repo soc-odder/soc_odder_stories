@@ -21,7 +21,7 @@ function soc_odder_stories_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_soc_odder_story';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['comment_default_mode_soc_odder_story'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -42,7 +42,7 @@ function soc_odder_stories_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_soc_odder_story';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_preview_soc_odder_story'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -80,17 +80,23 @@ function soc_odder_stories_strongarm() {
       'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
+      'search_index' => array(
+        'custom_settings' => TRUE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '6',
+          'weight' => '8',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
         'redirect' => array(
-          'weight' => '8',
+          'weight' => '10',
         ),
       ),
       'display' => array(),
@@ -126,6 +132,7 @@ function soc_odder_stories_strongarm() {
   $strongarm->value = array(
     0 => 'status',
     1 => 'promote',
+    2 => 'revision',
   );
   $export['node_options_soc_odder_story'] = $strongarm;
 
@@ -133,7 +140,7 @@ function soc_odder_stories_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_soc_odder_story';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['node_preview_soc_odder_story'] = $strongarm;
 
   $strongarm = new stdClass();
